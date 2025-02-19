@@ -2,14 +2,14 @@ Step-by-Step Guide to Install and Deploy Vulnerable Code
 
 Step 1: Set Up the Environment
     Install Python:
+    
+1. Download and install Python from python.org.
+2. Ensure Python is added to your system PATH during installation.
+3. Verify the installation by running:
 
-        Download and install Python from python.org.
-        Ensure Python is added to your system PATH during installation.
-        Verify the installation by running:
         python --version
 
-    Install SQLite:
-        SQLite is a lightweight database that comes pre-installed with Python. No additional installation is required.
+4. SQLite (it will be comes pre-installed with Python. No additional installation is required)
 
 Step 2: Create a Database and Table
 Open a terminal or command prompt.
