@@ -1,0 +1,18 @@
+# snippets parameterized
+
+@app.route('/', methods=['GET', 'POST'])
+def login():
+    result = None
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        # Fixed query using parameterized inputs
+        conn = sqlite3.connect('example.db')
+        cursor = conn.cursor()
+        query = "SELECT * FROM users WHERE username = ? AND password = ?"
+        cursor.execute(query, (username, password))
+        result = cursor.fetchall()
+        conn.close()
+
+    return render_template_string(HTML_TEMPLATE, result=result)
